@@ -20,14 +20,18 @@ class ExperimentalDetails extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="experiment-details-container">experimental details</div>
-        <div className="experiment-inventory">This is the container for all the experiments</div>
-        <AddExperimentalDataEntryForm addExperiment={this.props.addExperiment}/>
-      </div>
+          <div id="experiment-container-two">
+          <div id="experiment-data-entry-container">
+            <AddExperimentalDataEntryForm addExperiment={this.props.addExperiment}/>
+          </div>
+            <div id="display-experiment-data">
+                <ExperimentInventory/>
+            </div>
+          </div>
       )
   }
 
 }
+
 
 export default ExperimentalDetails

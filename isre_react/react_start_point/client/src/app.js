@@ -7,8 +7,6 @@ window.addEventListener('load', function () {
   ReactDOM.render(
 
 <AppContainer/>,
-
-
     document.getElementById('app')
     );
 });

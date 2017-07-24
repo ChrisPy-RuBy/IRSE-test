@@ -2,17 +2,19 @@ import React from 'react'
 import Header from '../components/Header'
 import UserDetails from '../components/UserDetails'
 import ExperimentalDetails from '../components/ExperimentalDetails'
+import sampleUsers from '../sample-users'
 
 class AppContainer extends React.Component {
 
 constructor() {
   super()
   this.state = {
-    users: [],
+    users: {},
     experiments: []
   }
 this.addExperiment = this.addExperiment.bind(this)
 this.addUser = this.addUser.bind(this)
+this.loadSampleUsers = this.loadSampleUsers.bind(this)
 }
 
 addExperiment (experiment) {
@@ -27,15 +29,29 @@ addUser (user) {
   this.setState({users: newUser})
 }
 
+loadSampleUsers() {
+  const users = this.state.users
+    this.setState({
+    users: sampleUsers
+  })
 
+}
 
 render() {
   return(
-  <div className="I-R-S-E">
-    <Header/>
-    <UserDetails addUser={this.addUser}/>
-    <ExperimentalDetails addExperiment={this.addExperiment}/>
-  </div>
+    <div id="app">
+    <div id="app-header">
+      <Header/>
+    </div>
+    <div id="app-body-container">
+      <div id="user-container">
+        <UserDetails addUser={this.addUser} loadSampleUsers={this.loadSampleUsers} users={this.state.users}/>
+      </div>
+      <div id="experiment-container">
+        <ExperimentalDetails addExperiment={this.addExperiment}/>
+      </div>
+    </div>
+    </div>
   ) 
 }
 

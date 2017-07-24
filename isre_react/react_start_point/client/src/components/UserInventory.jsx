@@ -1,13 +1,37 @@
 import React from 'react'
-import AddUserDataEntryForm from '../forms/AddUserDataEntryForm'
 
 
 class UserInventory extends React.Component {
 
+  constructor() {
+    super();
+    this.renderUsers = this.renderUsers.bind(this)
+  }
+
+  renderUsers(key) {
+    const user  =this.props.users[key];
+    console.log(user)
+
+    return(
+      <li key={key}>
+        <span>{user.name}</span>
+      </li>
+      )
+
+
+  }
+
+
+
   render() {
     return(
-      <div className="user-details-component">user details
-        <AddUserDataEntryForm/>
+      <div id="user-details-component">
+        <button onClick={this.props.loadSampleUsers}>Load users</button>
+        <button onClick={this.renderUsers}>Display all users</button>
+         <div className="user-detail-wrap">
+            <ul className="users">
+            </ul>
+      </div>,
       </div>
       )
   }

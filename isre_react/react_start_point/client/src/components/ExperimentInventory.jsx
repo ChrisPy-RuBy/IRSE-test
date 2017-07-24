@@ -5,8 +5,7 @@ class ExperimentInventory extends React.Component {
 
   render() {
     return(
-        <div className="experiment-inventory">This is the container for all the experiments
-        <AddExperimentalDataEntryForm/>
+        <div id="experiment-inventory">This is the container for all the experiments
         </div>
       )
   }

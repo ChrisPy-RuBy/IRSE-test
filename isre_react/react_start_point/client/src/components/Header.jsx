@@ -5,7 +5,7 @@ class Header extends React.Component {
 render() {
   return(
       <div>
-        <p>The internation Repository of Scientific Experimentation</p>
+        <h1>The internation Repository of Scientific Experimentation</h1>
       </div>
     )
 }

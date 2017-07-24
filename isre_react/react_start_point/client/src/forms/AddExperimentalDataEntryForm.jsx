@@ -17,14 +17,14 @@ class AddExperimentalDataEntryForm extends React.Component {
   }
 
   generateRandomExperimentId() {
-    var code = "xxxx-1111-2222-yyyy-vvvv"
-    console.log(code)
+
+     var newCode = `${Math.floor(Math.random()*9999)}- ${Math.floor(Math.random()*9999)}-${Math.floor(Math.random()*9999)}-${Math.floor(Math.random()*9999)}`
   }
 
   render() {
     return(
       <div className="experimental-data-entry-form">Experimental data entry
-        <form className='experiment-edit' onClick={this.createExperiment.bind(this)}>
+        <form className='experiment-edit'>
           <input ref={(input) => this.id = input} type="text" placeholder="user-id"/>
           <input ref={(input) => this.title = input} type="text" placeholder="experiment-title"/>
           <input ref={(input) => this.desc = input} type="text" placeholder="experiment-desc"/>
@@ -37,7 +37,7 @@ class AddExperimentalDataEntryForm extends React.Component {
       </select>
       
       <button className="generate-experiment-id" onClick={this.generateRandomExperimentId.bind(this)}>Generate Experiment Id</button>
-      <button type="submit">Add Experiment</button>
+      <button type="submit" onClick={this.createExperiment.bind(this)}>Add Experiment</button>
       </form>
 
 
