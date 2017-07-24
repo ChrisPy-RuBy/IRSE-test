@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import AppContainer from './containers/AppContainer'
+
 
 window.addEventListener('load', function () {
   ReactDOM.render(
-    <h1>International Repository for Scientific Experimentation </h1>,
+
+<AppContainer/>,
+
+
     document.getElementById('app')
-  );
+    );
 });
