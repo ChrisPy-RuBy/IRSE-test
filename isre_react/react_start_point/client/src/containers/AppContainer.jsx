@@ -9,7 +9,7 @@ class AppContainer extends React.Component {
 constructor() {
   super()
   this.state = {
-    users: {},
+    users: [],
     experiments: []
   }
 this.addExperiment = this.addExperiment.bind(this)
@@ -38,6 +38,8 @@ loadSampleUsers() {
 }
 
 render() {
+
+  
   return(
     <div id="app">
     <div id="app-header">

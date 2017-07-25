@@ -1,5 +1,5 @@
 import React from 'react'
-
+import User from './User'
 
 class UserInventory extends React.Component {
 
@@ -9,32 +9,39 @@ class UserInventory extends React.Component {
   }
 
   renderUsers(key) {
-    const user  =this.props.users[key];
-    console.log(user)
-
-    return(
-      <li key={key}>
-        <span>{user.name}</span>
-      </li>
-      )
-
+    const users  =this.props.users;
+    console.log(users)
 
   }
 
 
 
   render() {
+
+
+
     return(
-      <div id="user-details-component">
+      <div id="user-details-component"> user-details-component
         <button onClick={this.props.loadSampleUsers}>Load users</button>
         <button onClick={this.renderUsers}>Display all users</button>
          <div className="user-detail-wrap">
-            <ul className="users">
+            <ul className="list-of-users"> 
+            {
+              this.props.users.map( (user, index) => <User key={index} details={user}/>)
+            }
             </ul>
-      </div>,
+      </div>
       </div>
       )
   }
 }
 
 export default UserInventory
+
+// <ul className="list-of-fishes">
+//   {
+//     Object
+//       .keys(this.state.fishes)
+//       .map(key => <Fish key={key} index={key} details={this.state.fishes[key]} addToOrder={this.addToOrder}/>)
+//   }
+// </ul>
