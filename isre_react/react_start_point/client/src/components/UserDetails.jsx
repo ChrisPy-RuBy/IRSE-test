@@ -9,7 +9,6 @@ class UserDetails extends React.Component {
   }
 
   render() {
-    console.log("this", this.props.displayUsers)
     return ( 
         <div className="user-details-component">user details
           <AddUserDataEntryForm addUser={this.props.addUser}/>

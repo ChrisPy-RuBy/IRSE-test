@@ -12,11 +12,13 @@ constructor() {
     users: [],
     experiments: [],
     displayUsers: false,
-    displayExperiment: false
+    displayExperiments: false
   }
 this.addExperiment = this.addExperiment.bind(this)
 this.addUser = this.addUser.bind(this)
 this.loadSampleUsers = this.loadSampleUsers.bind(this)
+this.toggleDisplayUser = this.toggleDisplayUser.bind(this)
+this.toggleDisplayExperiments = this.toggleDisplayExperiments.bind(this)
 }
 
 addExperiment (experiment) {
@@ -43,13 +45,19 @@ toggleDisplayUser() {
   this.setState({
     displayUsers: newDisplay
   })
-
-  
 }
+
+toggleDisplayExperiments() {
+  const newDisplay = !this.state.displayExperiments
+  this.setState({
+    displayExperiments: newDisplay
+  })
+  console.log(this.state.displayExperiments)
+}
+
 
 render() {
 
-console.log(this.state.displayUsers)
 
   return(
     <div id="app">
@@ -58,10 +66,10 @@ console.log(this.state.displayUsers)
     </div>
     <div id="app-body-container">
       <div id="user-container">
-        <UserDetails addUser={this.addUser} loadSampleUsers={this.loadSampleUsers} users={this.state.users} displayUsers={this.state.displayUsers} toggleDisplayUsers={this.toggleDisplayUser.bind(this)}/>
+        <UserDetails addUser={this.addUser} loadSampleUsers={this.loadSampleUsers} users={this.state.users} displayUsers={this.state.displayUsers} toggleDisplayUsers={this.toggleDisplayUser}/>
       </div>
       <div id="experiment-container">
-        <ExperimentalDetails addExperiment={this.addExperiment}/>
+        <ExperimentalDetails addExperiment={this.addExperiment} experiments={this.state.experiments} displayExperiments={this.state.displayExperiments} toggleDisplayExperiments={this.toggleDisplayExperiments}/>
       </div>
     </div>
     </div>
