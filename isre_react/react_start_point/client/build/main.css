@@ -21,6 +21,12 @@ h3#box-title {
   margin: 10px;
 }
 
+h4#box-title {
+  color: black;
+  margin: 5px;
+}
+
+
 div#app {
   display:flex;
   flex-direction: column;
@@ -72,13 +78,34 @@ div#experiment-container-two {
   margin: 0px 0px 0px 25px;
 }
 
-div#user-container {
+div#user-container-one {
   display:flex;
   flex-direction: column;
   justify-content: space-between; 
   height: 80vh;
   width: 45%;
   margin: 0px 25px 0px 25px;
+}
+
+div#user-container-two {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  height: 80vh;
+  width: ;
+  margin: 0px 25px 0px 25px;
+}
+
+div#user-details-component {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px; 
+  background-color: #abbab4;
+  height: 50vh;
+  width: 600px;
+  border-radius: 10px
 }
 
 div#experiment-data-entry-container {
@@ -92,6 +119,29 @@ div#experiment-data-entry-container {
   border-radius: 10px
 }
 
+div#users-data-entry-form {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  background-color: #abbab4;
+  border-radius: 10px
+}
+
+div#users-data-entry-form-component {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #abbab4;
+  height: 40vh;
+  width: 600px;
+  border-radius: 10px
+}
+
 div#display-experiment-data {
   display: flex;
   flex-flow: column;
@@ -100,15 +150,5 @@ div#display-experiment-data {
   width: 100%;
   height: 40%;
   background-color: #abbab4;
-  border-radius: 10px
-}
-
-div.user-details-component {
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #abbab4;
-  height: 50vh;
   border-radius: 10px
 }

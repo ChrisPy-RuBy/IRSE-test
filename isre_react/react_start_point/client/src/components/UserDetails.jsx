@@ -10,10 +10,10 @@ class UserDetails extends React.Component {
 
   render() {
     return ( 
-        <div className="user-details-component">user details
-          <AddUserDataEntryForm addUser={this.props.addUser}/>
-          <UserInventory loadSampleUsers={this.props.loadSampleUsers} users={this.props.users} displayUsers={this.props.displayUsers} toggleDisplayUsers={this.props.toggleDisplayUsers}/>
-        </div>
+      <div id="user-container-two">
+          <UserInventory loadSampleUsers={this.props.loadSampleUsers} users={this.props.users} displayUsers={this.props.displayUsers} toggleDisplayUsers={this.props.toggleDisplayUsers} allExperimentsForUser={this.props.allExperimentsForUser}/>
+          <AddUserDataEntryForm addUser={this.props.addUser} />
+      </div>
       )
   }
   }

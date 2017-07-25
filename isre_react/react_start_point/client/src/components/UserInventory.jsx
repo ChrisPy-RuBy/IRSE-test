@@ -7,6 +7,7 @@ class UserInventory extends React.Component {
     super();
     // this.renderUsers = this.renderUsers.bind(this)
     // this.displayUser =this.displayUser.bind(this)
+
   }
 
 
@@ -24,8 +25,9 @@ class UserInventory extends React.Component {
   //   console.log("users", this.props.users)
   // }
 
-  renderUsers() {
-
+  allExperimentsForUser() {
+    console.log("button clicked")
+      this.props.allExperimentsForUser(60)
   }
 
 
@@ -35,8 +37,9 @@ class UserInventory extends React.Component {
     if(this.props.displayUsers) {
       return(
         <div id="user-details-component"> user-details-component
-          <button onClick={this.props.loadSampleUsers}>Load users</button>
+          <button onClick={this.props.loadSampleUsers}>Load ubberss</button>
           <button onClick={this.props.toggleDisplayUsers}>Display all users</button>
+          <button onClick={this.props.allExperimentsForUser.bind(this, 60)}>Return all experiments for one user</button>
         <div className="user-detail-wrap">
            <ul className="list-of-users"> 
            {
@@ -51,6 +54,7 @@ class UserInventory extends React.Component {
           <div id="user-details-component"> user-details-component
             <button onClick={this.props.loadSampleUsers}>Load users</button>
             <button onClick={this.props.toggleDisplayUsers}>Display all users</button>
+            <button onClick={this.props.allExperimentsForUser.bind(this, 60)}>Return all experiments for one user</button>
           </div>
         )
 

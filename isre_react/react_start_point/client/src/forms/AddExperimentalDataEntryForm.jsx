@@ -7,7 +7,7 @@ class AddExperimentalDataEntryForm extends React.Component {
     event.preventDefault();
     const experiment = {
       userid: this.id.value,
-      experimentTitle: this.title.value,
+      title: this.title.value,
       experimentDescription: this.desc.value,
       field: this.field.value,
       image: this.image.value,

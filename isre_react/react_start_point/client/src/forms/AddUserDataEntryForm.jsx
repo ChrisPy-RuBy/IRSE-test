@@ -17,7 +17,8 @@ addUser(event) {
     institution: this.institution.value,
     Orcid_id: this.orcid_id.value,
   }
-  console.log(user)
+  this.props.addUser(user)
+  console.log("the user in bottom", user)
 
 }
 
