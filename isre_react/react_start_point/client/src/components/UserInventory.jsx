@@ -5,12 +5,26 @@ class UserInventory extends React.Component {
 
   constructor() {
     super();
-    this.renderUsers = this.renderUsers.bind(this)
+    // this.renderUsers = this.renderUsers.bind(this)
+    // this.displayUser =this.displayUser.bind(this)
   }
 
-  renderUsers(key) {
-    const users  =this.props.users;
-    console.log(users)
+
+  // displayUser() {
+  //   const toggle = this.props.displayUser
+  //   console.log("toggle", toggle)
+  //   this.props.displayUser = true 
+  //   console.log("toggle test", this.props.displayUser)
+
+
+  // }
+
+  // renderUsers() {
+  //   console.log("displayUsers", this.props.displayUser)
+  //   console.log("users", this.props.users)
+  // }
+
+  renderUsers() {
 
   }
 
@@ -18,21 +32,29 @@ class UserInventory extends React.Component {
 
   render() {
 
-
-
-    return(
-      <div id="user-details-component"> user-details-component
-        <button onClick={this.props.loadSampleUsers}>Load users</button>
-        <button onClick={this.renderUsers}>Display all users</button>
-         <div className="user-detail-wrap">
-            <ul className="list-of-users"> 
-            {
-              this.props.users.map( (user, index) => <User key={index} details={user}/>)
-            }
-            </ul>
-      </div>
+    if(this.props.displayUsers) {
+      return(
+        <div id="user-details-component"> user-details-component
+          <button onClick={this.props.loadSampleUsers}>Load users</button>
+          <button onClick={this.props.toggleDisplayUsers}>Display all users</button>
+        <div className="user-detail-wrap">
+           <ul className="list-of-users"> 
+           {
+             this.props.users.map( (user, index) => <User key={index} details={user}/>)
+           }
+           </ul>
+        </div>
       </div>
       )
+    } else {
+      return (
+          <div id="user-details-component"> user-details-component
+            <button onClick={this.props.loadSampleUsers}>Load users</button>
+            <button onClick={this.props.toggleDisplayUsers}>Display all users</button>
+          </div>
+        )
+
+    }
   }
 }
 
