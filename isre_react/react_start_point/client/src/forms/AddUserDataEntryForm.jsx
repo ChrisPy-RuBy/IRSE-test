@@ -26,7 +26,7 @@ addUser(event) {
 
     render() {
       return(
-      <div id="users-data-entry-form-component">
+        <div id="users-data-entry-form-component">
       <div id="user-data-entry-form-header">
       <h4 id="box-title">New User</h4>
       <div id="button-container-three">

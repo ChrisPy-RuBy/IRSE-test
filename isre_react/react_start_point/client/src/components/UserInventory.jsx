@@ -45,14 +45,14 @@ class UserInventory extends React.Component {
               </div>
               </div>
               <div id='user-details-display-container'>
-                <div id='user-details-title-header'>
-                  <p id="user-details-table-name-title">NAME</p>
-                  <p id="user-details-table-institution-title">INSTIT.</p>
-                  <p id="user-details-table-address-title">ADDRESS</p>
-                  <p id="user-details-table-select-title"></p>
-                </div>
                 <div id="data-container">
                   <ul id="user-details-box"> 
+                  <div id='user-details-title-header'>
+                    <p id="user-details-table-name-title">NAME</p>
+                    <p id="user-details-table-institution-title">INSTIT.</p>
+                    <p id="user-details-table-address-title">ADDRESS</p>
+                    <p id="user-details-table-select-title"></p>
+                  </div>
                   {
                   this.props.users.map( (user, index) => <User key={index} details={user}/>)
                   }

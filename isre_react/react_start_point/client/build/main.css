@@ -150,8 +150,8 @@ div#experiment-container-two {
   justify-content: space-between;
   align-items: center; 
   height: 80vh;
-  width: 100%;
-  margin: 0px 0px 0px 25px;
+  width: 50%;
+  margin: 0px 25px 0px 25px;
 }
 
 
@@ -176,7 +176,7 @@ div#user-details-container {
   margin-bottom: 15px; 
   background-color: #abbab4;
   height: 50vh;
-  width: 600px;
+  width: 100%;
   border-radius: 10px
 }
 
@@ -223,7 +223,6 @@ div#user-details-title-header {
 
 div#data-container {
   height: 90%;
-  width: 100%;
 }
 
 p#user-details-table-name-title {
@@ -233,19 +232,22 @@ p#user-details-table-name-title {
 
 p#user-details-table-name {
   width: 30%;
+  margin: 10px;
   border-right: 0.25vh solid grey;
   font-style: bold;
 }
 
 p#user-details-table-institution-title {
-  width: 30%;
+  width: 40%;
   font-weight: bold;
+  margin: 10px;
 }
 
 
 p#user-details-table-institution {
-  width: 30%;
+  width: 40%;
   border-right: 0.25vh solid grey;
+  margin: 10px;
 }
 
 p#user-details-table-address-title {
@@ -259,7 +261,7 @@ p#user-details-table-address {
 }
 
 p#user-details-table-select-title {
-  width: 40%;
+  width: 12%;
 }
 
 button#user-select-button {
@@ -287,13 +289,13 @@ div#users-data-entry-form-component {
 
   background-color: #abbab4;
   height: 40vh;
-  width: 600px;
+  width: 100%;;
   border-radius: 10px
 }
 
 div#user-data-entry-form-header {
   display: flex;
-  border-bottom: #4d4d4d;
+  border-bottom: 0.5vh solid grey;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -377,6 +379,7 @@ div#experiment-data-entry-container {
 }
 
 div#experimental-data-entry-form {
+  
 
 }
 
