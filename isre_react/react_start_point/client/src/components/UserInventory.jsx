@@ -36,20 +36,29 @@ class UserInventory extends React.Component {
 
     if(this.props.displayUsers) {
       return(
-        <div id="user-details-container">
-          <div id="user-details-header">
-            <h4 id="box-title">User Details</h4>
-          </div>
-          <button onClick={this.props.loadSampleUsers}>Load ubberss</button>
-          <button onClick={this.props.toggleDisplayUsers}>Display all users</button>
-          <button onClick={this.props.allExperimentsForUser.bind(this, 60)}>Return all experiments for one user</button>
-        <div className="user-detail-wrap">
-           <ul className="list-of-users"> 
-           {
-             this.props.users.map( (user, index) => <User key={index} details={user}/>)
-           }
-           </ul>
-        </div>
+            <div id="user-details-container">
+              <div id="user-details-header">
+                <h4 id="box-title">User Details</h4>
+                <div id="button-container-one">
+                <button onClick={this.props.toggleDisplayUsers}>Display all</button>
+                <button onClick={this.props.allExperimentsForUser.bind(this, 60)}>Return all EXP for user</button>
+              </div>
+              </div>
+              <div id='user-details-display-container'>
+                <div id='user-details-title-header'>
+                  <p id="user-details-table-name-title">NAME</p>
+                  <p id="user-details-table-institution-title">INSTIT.</p>
+                  <p id="user-details-table-address-title">ADDRESS</p>
+                  <p id="user-details-table-select-title"></p>
+                </div>
+                <div id="data-container">
+                  <ul id="user-details-box"> 
+                  {
+                  this.props.users.map( (user, index) => <User key={index} details={user}/>)
+                  }
+                  </ul>
+                </div>
+              </div>
       </div>
       )
     } else {
@@ -62,6 +71,9 @@ class UserInventory extends React.Component {
             <button onClick={this.props.allExperimentsForUser.bind(this, 60)}>Return all EXP for user</button>
           </div>
           </div>
+          <div id='user-details-display-container'>
+          user-details-display-container
+        </div>
         </div>
         )
 
@@ -70,4 +82,6 @@ class UserInventory extends React.Component {
 }
 
 export default UserInventory
+
+
 

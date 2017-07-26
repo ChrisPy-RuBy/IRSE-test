@@ -49,14 +49,14 @@ div#app {
 }
 
 div#app-header {
-    display: flex;
-    flex-direction: row
-    margin-bottom: 15px;
-    align-items: center; 
-    border-bottom: 1vh solid black; 
-    background: #abbab4;
-    width: 100%;
-    height: 15vh;
+  display: flex;
+  flex-direction: row
+  margin-bottom: 15px;
+  align-items: center; 
+  border-bottom: 1vh solid black; 
+  background: #abbab4;
+  width: 100%;
+  height: 15vh;
 }
 
 div#app-body-container {
@@ -115,13 +115,29 @@ input[type=submit] {
 div#button-container-one {
   display: flex;
   width: 60%;
+  height: 100%;
   justify-content: space-around
 }
 
 div#button-container-one {
   display: flex;
   width: 60%;
+  height: 100%;
   justify-content: space-around
+}
+
+div#button-container-three {
+  display: flex;
+  width: 60%;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+div#button-container-four {
+  display: flex;
+  width: 60%;
+  height: 100%;
+  justify-content: flex-end;
 }
 
 
@@ -166,11 +182,101 @@ div#user-details-container {
 
 div#user-details-header {
   display: flex;
+  border-bottom: 0.5vh solid grey;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+}
+
+div#user-details-display-container {
+  display: flex;
+  flex-direction: column;
+  height: 85%;
+  width: 100%;
+  overflow-y:scroll;
+
+}
+
+ul#user-details-box {
+  width: 100%;
+  margin-top: 25px;
+
+}
+
+span#user-table-entry {
+  display: flex;
+  font-size: 12px;
+  border-bottom: 0.25vh solid grey;
+  justify-content: center;
+}
+
+div#user-details-title-header {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  border-bottom: 0.25vh solid grey;
+  justify-content: center;
+  height: 10%;
+  text-align: center;
+}
+
+div#data-container {
+  height: 90%;
   width: 100%;
 }
 
+p#user-details-table-name-title {
+  width: 30%;
+  font-weight: bold;
+}
 
+p#user-details-table-name {
+  width: 30%;
+  border-right: 0.25vh solid grey;
+  font-style: bold;
+}
+
+p#user-details-table-institution-title {
+  width: 30%;
+  font-weight: bold;
+}
+
+
+p#user-details-table-institution {
+  width: 30%;
+  border-right: 0.25vh solid grey;
+}
+
+p#user-details-table-address-title {
+  width: 40%;
+  font-weight: bold;
+}
+
+p#user-details-table-address {
+  width: 40%;
+  border-right: 0.25vh solid grey;
+}
+
+p#user-details-table-select-title {
+  width: 40%;
+}
+
+button#user-select-button {
+  margin: 5px;
+  padding: 0px 2.5px 0px 2.5px;
+  text-transform: uppercase;
+  background: #e6e6e6;
+  border: 1px solid #000;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: 'Open Sans';
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: relative;
+  z-index: 2;
+
+}
 /*user form*/
 
 div#users-data-entry-form-component {
@@ -185,6 +291,56 @@ div#users-data-entry-form-component {
   border-radius: 10px
 }
 
+div#user-data-entry-form-header {
+  display: flex;
+  border-bottom: #4d4d4d;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.user-edit {
+  margin-bottom: 20px;
+  border: 2px solid #000;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.user-edit input,
+.user-edit textarea,
+.user-edit select {
+  width: 33.33%;
+  padding: 10px;
+  line-height: 1;
+  font-size: 1.2rem;
+  border: 0;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+  background: #fff;
+}
+.user-edit input:focus,
+.user-edit textarea:focus,
+.user-edit select:focus {
+  outline: 0;
+  background: #fef2de;
+}
+.user-edit textarea {
+  width: 100%;
+}
+.user-edit input:last-of-type {
+  width: 100%;
+}
+.user-edit button {
+  width: 100%;
+  border: 0;
+}
 
 /*experiment details*/
 
@@ -201,9 +357,10 @@ div#display-experiment-data-container {
 div#experiment-details-header {
   display: flex;
   justify-content: space-between;
+  border-bottom: 0.5vh solid grey;
   align-self: flex-start
   width: 700px;
-  align-items: flex-start;
+  align-items: center;
 }
 
 /*experiment data entry form*/
@@ -217,5 +374,18 @@ div#experiment-data-entry-container {
   height: 50%;
   background-color: #abbab4;
   border-radius: 10px
+}
+
+div#experimental-data-entry-form {
+
+}
+
+div#experiment-data-entry-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-start
+  border-bottom: 0.5vh solid grey;
+  width: 700px;
+  align-items: center;
 }
 

@@ -7,9 +7,9 @@ render() {
   console.log("experiment details", this.props.details)
 
   return(
-    <li id="user-menu">
+    <span id="user-menu">
       <p>{this.props.details.title}</p>
-    </li>
+    </span>
     )
 }
 

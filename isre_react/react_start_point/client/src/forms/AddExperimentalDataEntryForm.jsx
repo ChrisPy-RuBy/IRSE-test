@@ -23,7 +23,14 @@ class AddExperimentalDataEntryForm extends React.Component {
 
   render() {
     return(
-      <div className="experimental-data-entry-form">Experimental data entry
+      <div id="experimental-data-entry-form-component">
+      <div id="experiment-data-entry-form-header">
+        <h4 id="box-title">New Experiment</h4>
+        <div id="button-container-four">
+      <button className="generate-experiment-id" onClick={this.generateRandomExperimentId.bind(this)}>Generate Experiment Id</button>
+      </div>
+      </div>
+      <div id="experiment-data-entry-form-container">
         <form className='experiment-edit'>
           <input ref={(input) => this.id = input} type="text" placeholder="user-id"/>
           <input ref={(input) => this.title = input} type="text" placeholder="experiment-title"/>
@@ -36,12 +43,11 @@ class AddExperimentalDataEntryForm extends React.Component {
           <option value="self-experimentation">self-experimentation</option>
       </select>
       
-      <button className="generate-experiment-id" onClick={this.generateRandomExperimentId.bind(this)}>Generate Experiment Id</button>
       <button type="submit" onClick={this.createExperiment.bind(this)}>Add Experiment</button>
       </form>
-
-
       </div>
+      </div>
+
       )
   }
 
