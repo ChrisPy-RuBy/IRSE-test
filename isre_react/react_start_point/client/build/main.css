@@ -22,8 +22,12 @@ h3#box-title {
 }
 
 h4#box-title {
+  font-family: sans-serif;
   color: black;
   margin: 5px;
+  padding: 0px 2.5px 0px 2.5px;;
+  background: #d4d4d4;
+  border-radius: 10px;
 }
 
 
@@ -41,12 +45,15 @@ div#app {
   font-size: 2rem;
 }
 
-
 div#app-header {
     display: flex;
+    flex-direction: row
     margin-bottom: 15px;
+
+    border-bottom: 1vh solid black; 
+    background: #abbab4;
     width: 100%;
-    height: 10%;
+    height: 15vh;
 }
 
 div#app-body-container {
@@ -58,15 +65,57 @@ div#app-body-container {
 
 }
 
-div#experiment-container {
-  display:flex;
-  flex-direction: column;
-  justify-content: space-;
-  align-items: center; 
-  height: 80vh;
-  width: 45%;
-  margin: 0px 0px 0px 25px;
+/*button stuff*/
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
 }
+button,
+input {
+  line-height: normal;
+}
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+button,
+input[type=submit] {
+  margin: 5px;
+  padding: 0px 2.5px 0px 2.5px;
+  text-transform: uppercase;
+  background: #e6e6e6;
+  border: 1px solid #000;
+  font-weight: 600;
+  font-size: 1.5rem;
+  font-family: 'Open Sans';
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: relative;
+  z-index: 2;
+}
+
+div#button-container {
+  display: flex;
+  width: 60%;
+  justify-content: space-around
+}
+
+
+
+/*experiment stuff*/
 
 div#experiment-container-two {
   display:flex;
@@ -78,6 +127,9 @@ div#experiment-container-two {
   margin: 0px 0px 0px 25px;
 }
 
+
+/*user stuff*/
+
 div#user-container-one {
   display:flex;
   flex-direction: column;
@@ -87,20 +139,13 @@ div#user-container-one {
   margin: 0px 25px 0px 25px;
 }
 
-div#user-container-two {
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between; 
-  height: 80vh;
-  width: ;
-  margin: 0px 25px 0px 25px;
-}
+/*user details*/
 
-div#user-details-component {
+div#user-details-container {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 15px; 
   background-color: #abbab4;
   height: 50vh;
@@ -108,27 +153,14 @@ div#user-details-component {
   border-radius: 10px
 }
 
-div#experiment-data-entry-container {
+div#user-details-header {
   display: flex;
-  flex-flow: column;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
-  height: 50%;
-  background-color: #abbab4;
-  border-radius: 10px
 }
 
-div#users-data-entry-form {
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 50%;
-  background-color: #abbab4;
-  border-radius: 10px
-}
+
+/*user form*/
 
 div#users-data-entry-form-component {
   display: flex;
@@ -142,7 +174,23 @@ div#users-data-entry-form-component {
   border-radius: 10px
 }
 
-div#display-experiment-data {
+
+/*experiment details*/
+
+div#experiment-data-entry-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  background-color: #abbab4;
+  border-radius: 10px
+}
+
+/*experiment data entry form*/
+
+div#display-experiment-data-container {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -152,3 +200,4 @@ div#display-experiment-data {
   background-color: #abbab4;
   border-radius: 10px
 }
+

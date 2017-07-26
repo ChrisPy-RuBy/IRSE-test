@@ -10,7 +10,7 @@ class UserDetails extends React.Component {
 
   render() {
     return ( 
-      <div id="user-container-two">
+      <div id="user-container-one">
           <UserInventory loadSampleUsers={this.props.loadSampleUsers} users={this.props.users} displayUsers={this.props.displayUsers} toggleDisplayUsers={this.props.toggleDisplayUsers} allExperimentsForUser={this.props.allExperimentsForUser}/>
           <AddUserDataEntryForm addUser={this.props.addUser} />
       </div>

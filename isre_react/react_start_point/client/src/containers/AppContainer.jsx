@@ -165,12 +165,8 @@ render() {
       <Header/>
     </div>
     <div id="app-body-container">
-      <div id="user-container-one">
         <UserDetails addUser={this.addUser} loadSampleUsers={this.loadSampleUsers} users={this.state.users} displayUsers={this.state.displayUsers} toggleDisplayUsers={this.toggleDisplayUser} allExperimentsForUser={this.allExperimentsForUser}/>
-      </div>
-      <div id="experiment-container">
         <ExperimentalDetails addExperiment={this.addExperiment} experiments={this.state.experiments} displayExperiments={this.state.displayExperiments} toggleDisplayExperiments={this.toggleDisplayExperiments} allUsersForExperiment={this.allUsersForExperiment}/>
-      </div>
     </div>
     </div>
   ) 

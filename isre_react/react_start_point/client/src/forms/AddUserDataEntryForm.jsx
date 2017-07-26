@@ -26,7 +26,7 @@ addUser(event) {
 
     render() {
       return(
-      <div className="userData">UserDataEntryForm
+      <div id="users-data-entry-form-component">UserDataEntryForm
       <form className='user-edit'>
         <input ref={(input) => this.id = input}type="text" placeholder="user-id"/>
         <input ref={(input) => this.name = input} type="text" placeholder="name"/>

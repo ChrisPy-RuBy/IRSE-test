@@ -36,7 +36,10 @@ class UserInventory extends React.Component {
 
     if(this.props.displayUsers) {
       return(
-        <div id="user-details-component"> user-details-component
+        <div id="user-details-container">
+          <div id="user-details-header">
+            <h4 id="box-title">User Details</h4>
+          </div>
           <button onClick={this.props.loadSampleUsers}>Load ubberss</button>
           <button onClick={this.props.toggleDisplayUsers}>Display all users</button>
           <button onClick={this.props.allExperimentsForUser.bind(this, 60)}>Return all experiments for one user</button>
@@ -51,11 +54,15 @@ class UserInventory extends React.Component {
       )
     } else {
       return (
-          <div id="user-details-component"> user-details-component
-            <button onClick={this.props.loadSampleUsers}>Load users</button>
-            <button onClick={this.props.toggleDisplayUsers}>Display all users</button>
-            <button onClick={this.props.allExperimentsForUser.bind(this, 60)}>Return all experiments for one user</button>
+          <div id="user-details-container">
+          <div id="user-details-header">
+            <h4 id="box-title">User Details</h4>
+            <div id="button-container">
+            <button onClick={this.props.toggleDisplayUsers}>Display all</button>
+            <button onClick={this.props.allExperimentsForUser.bind(this, 60)}>Return all EXP for user</button>
           </div>
+          </div>
+        </div>
         )
 
     }
@@ -64,10 +71,3 @@ class UserInventory extends React.Component {
 
 export default UserInventory
 
-// <ul className="list-of-fishes">
-//   {
-//     Object
-//       .keys(this.state.fishes)
-//       .map(key => <Fish key={key} index={key} details={this.state.fishes[key]} addToOrder={this.addToOrder}/>)
-//   }
-// </ul>
