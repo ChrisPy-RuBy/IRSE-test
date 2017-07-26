@@ -206,6 +206,13 @@ ul#user-details-box {
 
 }
 
+div#image-container {
+  height: 100%;
+  width: 10%;
+  margin: 15px;
+  background-color: white;
+}
+
 span#user-table-entry {
   display: flex;
   font-size: 12px;
