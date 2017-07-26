@@ -25,7 +25,7 @@ class ExperimentalDetails extends React.Component {
             <AddExperimentalDataEntryForm addExperiment={this.props.addExperiment}/>
           </div>
             <div id="display-experiment-data-container">
-                <ExperimentInventory displayExperiments={this.props.displayExperiments} toggleDisplayExperiments={this.props.toggleDisplayExperiments} experiments={this.props.experiments} allUsersForExperiment={this.props.allUsersForExperiment}/>
+                <ExperimentInventory displayExperiments={this.props.displayExperiments} toggleDisplayExperiments={this.props.toggleDisplayExperiments} experiments={this.props.experiments} allUsersForExperiment={this.props.allUsersForExperiment} displayUserExperiments={this.props.displayUserExperiments}/>
             </div>
           </div>
       )

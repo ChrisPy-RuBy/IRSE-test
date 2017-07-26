@@ -13,7 +13,24 @@ class ExperimentInventory extends React.Component {
 
   render() {
 
-    if(this.props.displayExperiments) {
+    if(this.props.displayUserExperiments) {
+      return(
+        <div id="experiment-details-container">
+        <div id="experiment-details-header">
+        <h4 id="box-title">Experiments</h4>
+        <div id="button-container-two">
+          <button onClick={this.props.toggleDisplayExperiments}>Display all</button>
+          <button onClick={this.props.allUsersForExperiment.bind(this, 62)}>All users for exp</button>
+          </div>
+        </div>
+        <div id="display-experiment-details">
+          <div id="experimental-shit-box">derp</div>
+        </div>
+        </div>
+        )
+    }
+
+    else if(this.props.displayExperiments) {
 
       return (   
         <div id="experiment-inventory">

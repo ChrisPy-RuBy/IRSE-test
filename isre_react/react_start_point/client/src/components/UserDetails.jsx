@@ -11,7 +11,7 @@ class UserDetails extends React.Component {
   render() {
     return ( 
       <div id="user-container-one">
-          <UserInventory loadSampleUsers={this.props.loadSampleUsers} users={this.props.users} displayUsers={this.props.displayUsers} toggleDisplayUsers={this.props.toggleDisplayUsers} allExperimentsForUser={this.props.allExperimentsForUser}  hasSelectedUser={this.props.hasSelectedUser} toggleSelectedUser={this.props.toggleSelectedUser}/>
+          <UserInventory loadSampleUsers={this.props.loadSampleUsers} users={this.props.users} displayUsers={this.props.displayUsers} toggleDisplayUsers={this.props.toggleDisplayUsers} allExperimentsForUser={this.props.allExperimentsForUser}  hasSelectedUser={this.props.hasSelectedUser} toggleSelectedUser={this.props.toggleSelectedUser} toggleDisplayUserExperiements={this.props.toggleDisplayUserExperiements}/>
           <AddUserDataEntryForm addUser={this.props.addUser} />
       </div>
       )

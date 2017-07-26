@@ -7,6 +7,8 @@ class UserInventory extends React.Component {
     super();
     // this.renderUsers = this.renderUsers.bind(this)
     // this.displayUser =this.displayUser.bind(this)
+    this.toggleDisplayUserExperiements.bind(this)
+    this.allExperimentsForUser.bind(this, 60)
 
   }
 
@@ -25,12 +27,23 @@ class UserInventory extends React.Component {
   //   console.log("users", this.props.users)
   // }
 
+  toggleDisplayUserExperiements() {
+    console.log("make it here")
+    this.props.toggleDisplayUserExperiements()
+  }
+
   allExperimentsForUser() {
     console.log("button clicked")
     this.props.allExperimentsForUser(60)
   }
 
+  handleClick(event) {
+    event.preventDefault();
+    console.log('clicked')
+    this.allExperimentsForUser()
+    this.toggleDisplayUserExperiements()
 
+  }
 
   render() {
 
@@ -41,12 +54,15 @@ class UserInventory extends React.Component {
             <h4 id="box-title">User Details</h4>
           <div id="button-container-one">
         <button onClick={this.props.toggleDisplayUsers}>Display all</button>
-        <button onClick={this.props.allExperimentsForUser.bind(this, 60)}>Return all EXP for user</button>
+        <button onClick={this.handleClick.bind(this)}>Return all EXP for user</button>
         </div>
         </div>
         <div id='user-details-display-container'>
-              <div id="image-container"></div>
-              <div id="user-details-container"></div>
+              <div id="user-details-image-and-text">
+              <div id="image-container">Image</div>
+              <div id="user-details-container-small">Detailed Details</div>
+              </div>
+              <div id="further-details">MOAR DEtailed details</div>
         </div>
         </div>
         )

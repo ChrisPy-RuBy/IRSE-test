@@ -128,7 +128,7 @@ div#button-container-one {
 
 div#button-container-three {
   display: flex;
-  width: 60%;
+  width: 60
   height: 100%;
   justify-content: flex-end;
 }
@@ -192,10 +192,41 @@ div#user-details-header {
 div#user-details-display-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   height: 85%;
   width: 100%;
   overflow-y:scroll;
 
+}
+
+div#user-details-image-and-text {
+  display: flex;
+  flex-direction: row;
+  height: 80%;
+  width: 100%;
+}
+
+div#user-details-container-small {
+  height: 70%;
+  width: 70%;
+  margin: 15px;
+  background: #d4d4d4;
+  border-radius: 5px;
+}
+
+div#further-details {
+  background: #d4d4d4;
+  border-radius: 5px;
+  height: 40%;
+  width: 90%;
+  margin-bottom: 5%;
+}
+
+div#image-container {
+  height: 150px;
+  width: 150px;
+  margin: 15px;
+  background-image: url('./images/test.png');
 }
 
 ul#user-details-box {
@@ -206,12 +237,6 @@ ul#user-details-box {
 
 }
 
-div#image-container {
-  height: 100%;
-  width: 10%;
-  margin: 15px;
-  background-color: white;
-}
 
 span#user-table-entry {
   display: flex;
@@ -448,5 +473,29 @@ div#experiment-data-entry-form-header {
 .experiment-edit button {
   width: 100%;
   border: 0;
+}
+
+div#experiment-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+div#display-experiment-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 500%;
+  width: 100%;
+  overflow-y:scroll;
+}
+
+div#experimental-shit-box {
+  background: #d4d4d4;
+  border-radius: 5px;
+  height: 90%;
+  width: 90%;
+  margin-bottom: 5%;
+
 }
 
