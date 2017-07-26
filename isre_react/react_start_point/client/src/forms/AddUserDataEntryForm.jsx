@@ -34,12 +34,12 @@ addUser(event) {
       </div>
       </div>
       <form className='user-edit'>
-        <input ref={(input) => this.id = input}type="text" placeholder="user-id"/>
-        <input ref={(input) => this.name = input} type="text" placeholder="name"/>
-        <input ref={(input) => this.address = input} type="text" placeholder="address"/>
-        <input ref={(input) => this.email = input} type="text" placeholder="email"/>
-        <input ref={(input) => this.institution = input} type="text" placeholder="institution"/>
-        <input ref={(input) => this.orcid_id = input} type="text" placeholder="Orcid_id"/>
+        <input ref={(input) => this.id = input}type="text" placeholder="USER-ID"/>
+        <input ref={(input) => this.name = input} type="text" placeholder="NAME"/>
+        <input ref={(input) => this.address = input} type="text" placeholder="ADDRESS"/>
+        <input ref={(input) => this.email = input} type="text" placeholder="EMAIL"/>
+        <input ref={(input) => this.institution = input} type="text" placeholder="INSTITUTION"/>
+        <input ref={(input) => this.orcid_id = input} type="text" placeholder="ORCID_ID"/>
         <button type="submit"  onClick={this.addUser.bind(this)}>Submit User</button>
       </form>
       </div>

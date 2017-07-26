@@ -200,7 +200,9 @@ div#user-details-display-container {
 
 ul#user-details-box {
   width: 100%;
-  margin-top: 25px;
+  margin-top: 0px;
+  margin-left: 2px;
+  margin-right: 2px;
 
 }
 
@@ -222,7 +224,9 @@ div#user-details-title-header {
 }
 
 div#data-container {
-  height: 90%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 p#user-details-table-name-title {
@@ -302,18 +306,17 @@ div#user-data-entry-form-header {
 }
 
 .user-edit {
+  margin-left: 5px;
+  margin-right: 5px;
   margin-bottom: 20px;
   border: 2px solid #000;
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.user-edit input,
-.user-edit textarea,
-.user-edit select {
+.user-edit input {
   width: 33.33%;
   padding: 10px;
   line-height: 1;
@@ -379,7 +382,9 @@ div#experiments-data-entry-form-component {
   border-radius: 10px
 }
 
-div#experimental-data-entry-form-container {
+div#experimental-data-entry-form-container{
+  display: flex;
+  margin-bottom: 50px
 
 
 }
@@ -391,5 +396,50 @@ div#experiment-data-entry-form-header {
   align-self: flex-start;
   width: 100%;
   align-items: center;
+}
+
+.experiment-edit {
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 20px;
+  border: 2px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.experiment-edit input,
+.experiment-edit textarea,
+.experiment-edit select {
+  width: 33.33%;
+  padding: 10px;
+  line-height: 1;
+  font-size: 1.2rem;
+  border: 0;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+  background: #fff;
+}
+.experiment-edit input:focus,
+.experiment-edit textarea:focus,
+.experiment-edit select:focus {
+  outline: 0;
+  background: #fef2de;
+}
+.experiment-edit textarea {
+  width: 100%;
+}
+.experiment-edit input:last-of-type {
+  width: 100%;
+}
+.experiment-edit button {
+  width: 100%;
+  border: 0;
 }
 
