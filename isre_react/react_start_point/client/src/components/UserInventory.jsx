@@ -57,7 +57,7 @@ class UserInventory extends React.Component {
           <div id="user-details-container">
           <div id="user-details-header">
             <h4 id="box-title">User Details</h4>
-            <div id="button-container">
+            <div id="button-container-one">
             <button onClick={this.props.toggleDisplayUsers}>Display all</button>
             <button onClick={this.props.allExperimentsForUser.bind(this, 60)}>Return all EXP for user</button>
           </div>

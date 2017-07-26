@@ -10,9 +10,12 @@ html {
 }
 
 h1 {
+  display: flex;
   font-family: 'blanchcaps_inline', sans-serif;
   text-align: center;
   font-weight: normal;
+  align-items: : center;
+
   margin: 0;
 }
 
@@ -49,7 +52,7 @@ div#app-header {
     display: flex;
     flex-direction: row
     margin-bottom: 15px;
-
+    align-items: center; 
     border-bottom: 1vh solid black; 
     background: #abbab4;
     width: 100%;
@@ -61,7 +64,9 @@ div#app-body-container {
   flex-direction: row
   width: 100%;
   height: 85%;
-  margin-top: 15px
+  margin-top: 15px;
+  overflow: scroll;
+  overflow-:hidden;
 
 }
 
@@ -99,7 +104,7 @@ input[type=submit] {
   background: #e6e6e6;
   border: 1px solid #000;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-family: 'Open Sans';
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -107,7 +112,13 @@ input[type=submit] {
   z-index: 2;
 }
 
-div#button-container {
+div#button-container-one {
+  display: flex;
+  width: 60%;
+  justify-content: space-around
+}
+
+div#button-container-one {
   display: flex;
   width: 60%;
   justify-content: space-around
@@ -177,6 +188,26 @@ div#users-data-entry-form-component {
 
 /*experiment details*/
 
+div#display-experiment-data-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 40%;
+  background-color: #abbab4;
+  border-radius: 10px
+}
+
+div#experiment-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-start
+  width: 700px;
+  align-items: flex-start;
+}
+
+/*experiment data entry form*/
+
 div#experiment-data-entry-container {
   display: flex;
   flex-flow: column;
@@ -184,19 +215,6 @@ div#experiment-data-entry-container {
   align-items: center;
   width: 100%;
   height: 50%;
-  background-color: #abbab4;
-  border-radius: 10px
-}
-
-/*experiment data entry form*/
-
-div#display-experiment-data-container {
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 40%;
   background-color: #abbab4;
   border-radius: 10px
 }

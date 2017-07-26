@@ -172,6 +172,8 @@ render() {
   ) 
 }
 
+;
+
 }
 
 export default AppContainer
