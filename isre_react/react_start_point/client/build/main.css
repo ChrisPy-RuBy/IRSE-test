@@ -367,28 +367,29 @@ div#experiment-details-header {
 
 /*experiment data entry form*/
 
-div#experiment-data-entry-container {
+div#experiments-data-entry-form-component {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  height: 50%;
+
   background-color: #abbab4;
+  height: 40vh;
+  width: 100%;;
   border-radius: 10px
 }
 
-div#experimental-data-entry-form {
-  
+div#experimental-data-entry-form-container {
+
 
 }
 
 div#experiment-data-entry-form-header {
   display: flex;
   justify-content: space-between;
-  align-self: flex-start
   border-bottom: 0.5vh solid grey;
-  width: 700px;
+  align-self: flex-start;
+  width: 100%;
   align-items: center;
 }
 
